@@ -1,4 +1,11 @@
 npm init --> creates package.json
+install react, react DOM
+install bundler dependencies(webpack, parcel)
+add index.html
+add index.js
+add App.js
+configuration(add required config file) - webpack.config.js, .babelrc
+
 
 1.package.json file is introduced to have configuration of npm, it keeps a track of what versions of packages we have 
 
@@ -38,7 +45,42 @@ designing services so that each microservice is focused on a single,
 well-defined responsibility or concern. 
 This principle ensures modularity, scalability, and maintainability of the system by dividing it into distinct units that handle specific tasks.
 
-15. Monolithic architecture is a traditional software development model that uses a single code base for an application
+15. Monolithic architecture is a traditional software development model that uses a single code base for an application.
+
+16. if dependency array is not there in useEffect - useEffect will be called at every render
+    if dependency array is there but empty - useEffect will be rendered only at intial render(just once)
+    if dependency array is there but not empty - useEffect will be called as the dependency changes(i.e., value of state variable is updating)
+
+17. Routing - React-router-dom, a library which helps us to navigate from one page to another using Link tag provided by react-router-dom.
+so instead of using anchor tag <a>, we should use <Link> tag as it will not refresh the page while navigating to other page.
+*** Always use Link tag - It will not reload the whole page ***
+    #server side Routing
+    #client side Routing
 
 
-filter()
+18. Code splitting 
+    Chunking
+    Dynamic Bunding
+    Lazy Loading
+
+    Code splitting breaks down your application into smaller chunks, loading only the necessary parts to reduce the bundle size. 
+    Lazy loading defers loading non-essential resources until they're needed, further enhancing performance.
+
+19. Higher Order Component is a Function which takes a component and returns component.
+
+20. Redux Tool Kit - RTK
+    Store
+    Dispatch
+    Action
+    Reducer
+    Slice
+    Selector(Subscribing to the Store)
+
+    Flow of Redux 
+    
+    Click on Add btn --> An action dispatches --> then action calls a function called reducer --> Reducer will update the slice --> Selector --> Cart will be updated as it gets subscribed to the store through Selector
+
+21. Lifting state up
+22. Higher Order component
+23. Controlled/Uncontrolled components
+24. Context API
