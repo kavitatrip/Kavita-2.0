@@ -3,7 +3,8 @@ const { createSlice } = require("@reduxjs/toolkit");
 const appSlice = createSlice({
     name: 'app',
     initialState: {
-        isMenuOpen: true
+        isMenuOpen: true,
+        isLiveChat: true
     }, 
     reducers: {
         toggleMenu: (state) => {
@@ -11,9 +12,12 @@ const appSlice = createSlice({
         },
         collapseMenu: (state) => {
             state.isMenuOpen = false
+        },
+        liveChatStop: (state) => {
+            state.isLiveChat = false
         }
     }
 });
 
-export const { toggleMenu, collapseMenu } = appSlice.actions;
+export const { toggleMenu, collapseMenu, liveChatStop } = appSlice.actions;
 export default appSlice.reducer;
